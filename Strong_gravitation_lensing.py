@@ -16,12 +16,12 @@ H, W, _ = bg.shape
 
 M = 1.0
 b_crit = 3 * np.sqrt(3) * M      # photon sphere
-A = 1.2                          # strong-lensing strength
+A = 1.4                          # strong-lensing strength
 eps = 0.03                       # regularization scale
 
 # Geometry
 theta_max = 25.0
-N = 1000
+N = 1200
 
 output = np.zeros((N, N, 3), dtype=np.float32)
 
@@ -69,3 +69,4 @@ plt.imshow(output.astype(np.uint8))
 plt.axis("off")
 plt.title("Strong Gravitational Lensing with Photon Sphere")
 plt.show()
+
